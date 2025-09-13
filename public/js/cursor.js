@@ -1,37 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const circle = document.querySelector(".circle");
-  let mouseX = 0, mouseY = 0;
-  let currentX = 0, currentY = 0;
+  // Only run on desktop-like devices
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
-  // Track mouse position
-  document.addEventListener("mousemove", e => {
+  const circle = document.querySelector(".circle");
+  if (!circle) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentX = mouseX;
+  let currentY = mouseY;
+
+  // update mouse pos
+  document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
 
-  // Smooth follow loop
+  // smooth follow loop
   function animate() {
-    // Linear interpolation for smoothness
     currentX += (mouseX - currentX) * 0.2;
     currentY += (mouseY - currentY) * 0.2;
 
-    circle.style.transform = `translate(${currentX}px, ${currentY}px)`;
+    circle.style.left = `${currentX}px`;
+    circle.style.top = `${currentY}px`;
 
     requestAnimationFrame(animate);
   }
   animate();
-
-  // Left-click bubble pop
-  document.addEventListener("click", () => {
-    circle.classList.remove("pop");
-    void circle.offsetWidth; // restart animation
-    circle.classList.add("pop");
-  });
-
-  // Reset after animation
-  circle.addEventListener("animationend", () => {
-    circle.classList.remove("pop");
-    circle.style.transform += " scale(1)"; // preserve translate + reset scale
-    circle.style.opacity = "1";
-  });
 });
