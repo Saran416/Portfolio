@@ -1,0 +1,84 @@
+/* light mode */
+.light > *:not(.circle){
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.light > #footer-socialNetworks-github-svg-path{
+    fill: none;
+}
+
+/* dark mode */
+.dark {
+    --background-color: var(--background-color-dark) !important;
+    --secondary-background-color: var(--secondary-background-color-dark) !important;
+    --text-color: var(--text-color-dark) !important;
+    --text-secondary-color: var(--text-secondary-color-dark) !important;
+    --text-link-color: var(--text-link-color-dark) !important;
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+}
+
+.dark #footer-socialNetworks-github-svg-path{
+    fill: #FFFFFF;
+}
+
+.text-secondary {
+    color: var(--text-secondary-color) !important;
+}
+
+#theme-toggle:focus {
+    outline: 0;
+}
+
+#theme-toggle svg {
+    height: 18px;
+}
+
+button#theme-toggle {
+    border: none;
+    font-size: 26px;
+    margin: auto 4px;
+}
+
+body.dark #moon {
+    vertical-align: middle;
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+body *::selection {
+    color: var(--background-color) !important;
+    background-color: var(--primary-color) !important;
+}
+
+* {
+  cursor: none !important;
+}
+
+/* Base circle cursor */
+.circle {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Bubble pop animation */
+.circle.pop {
+  animation: bubble 0.4s ease-out forwards;
+}
+
+@keyframes bubble {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50%  { transform: translate(-50%, -50%) scale(2); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+}
+

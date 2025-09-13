@@ -1,0 +1,437 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Saran Konala"
+theme: "hugo-profile"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+#googleAnalytics:
+#id: G-MEASUREMENT_ID
+#disqus:
+#shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  # main:
+  #   - identifier: blog
+  #     name: Blog
+  #     title: Blog posts
+  #     url: /blogs
+  #     weight: 1
+  #   - identifier: gallery
+  #     name: Gallery
+  #     title: Blog posts
+  #     url: /gallery
+  #     weight: 2
+  # Dropdown menu
+  # - identifier: dropdown
+  #   title: Example dropdown menu
+  #   name: Dropdown
+  #   weight: 3
+  # - identifier: dropdown1
+  #   title: example dropdown 1
+  #   name: example 1
+  #   url: /#
+  #   parent: dropdown
+  #   weight: 1
+  # - identifier: dropdown2
+  #   title: example dropdown 2
+  #   name: example 2
+  #   url: /#
+  #   parent: dropdown
+  #   weight: 2
+
+params:
+  title: "Saran Konala"
+  description: Portfolio site of Saran Konala
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/images/logo.svg"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  color:
+    textColor: "#343a40"
+    secondaryTextColor: "#6c757d"
+    textLinkColor: "#007bff"
+    backgroundColor: "#eaedf0"
+    secondaryBackgroundColor: "#64ffda1a"
+    primaryColor: "#007bff"
+    secondaryColor: "#f8f9fa"
+
+    darkmode:
+      textColor: "#ffffff"
+      secondaryTextColor: "#ffffff"
+      textLinkColor: "#ffffff"
+      backgroundColor: "#000000"
+      secondaryBackgroundColor: "#141414"
+      primaryColor: "#ffffff"
+      secondaryColor: "#141414"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Saran Konala" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    # intro: "Hi, my name is"
+    # title: "Isabella."
+    subtitle: "Saran Konala"
+    content: "Exploring, Innovating and Building within the realms of Machine Learning and Software Development."
+    image: /images/logo.png
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "/SaranKonala.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/Saran416
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/saran-konala-7ab6762aa/
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.jpg"
+    content: |-
+      I am currently pursuing my Bachelor’s degree in Artificial Intelligence at the Indian Institute of Technology Hyderabad (IITH).
+
+      My fascination with AI drives me to explore and learn new concepts every day. I am particularly interested in deep learning. I have worked on several projects that involve building and deploying AI models and am always eager to take on new challenges and expand my knowledge.
+
+      Apart from this, I am quite familiar with web development and core CS concepts. My strong Problem Solving Skills allows me to approach problems methodically and develop efficient solutions.
+    skills:
+      enable: false
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "HTML"
+        - "CSS"
+        - "JavaScript"
+        - "React"
+        - "Node"
+        - "Express"
+
+  # Experience
+  experience:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - job: "Senior Software Developer"
+        company: "Facebook"
+        companyUrl: "https://example.com"
+        date: "Jan 2022 - present"
+        featuredLink:
+          enable: true
+          name: "View the project"
+          url: "https://example.com"
+        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+      - job: "Software Developer"
+        company: "Amazon"
+        companyUrl: "https://example.com"
+        date: "Sep 2020 - Dec 2021"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        info:
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Junior Software Developer"
+        company: "Apple"
+        companyUrl: "https://example.com"
+        date: "Jan 2020 - Aug 2020"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "UI/UX Designer"
+        company: "Netflix"
+        companyUrl: "https://example.com"
+        date: "June 2017 - Nov 2019"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Product Designer"
+        company: "Google"
+        companyUrl: "https://example.com"
+        date: "Feb 2016 - Mar 2017"
+        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Technology in Artificial Intelligence"
+        school:
+          name: "Indian Institute of Technology, Hyderabad"
+          url: "https://iith.ac.in/"
+        date: "2023 - 2027"
+        GPA: "9.09/10"
+        # content: |-
+        #   I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+        #   - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+        #   - Face mask detection using a single convolutional neural network.
+
+        #   Extracurricular Activities
+        #     - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        #     - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        featuredLink:
+          enable: false
+          name: "My academic record"
+          url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Academic Excellence Award
+        content: Awarded for ranking among the top CGPAs in the AI department, IITH.
+        # image: /images/achievement.jpg
+      - title: Google Launchpad 2025 Mentee
+        content: Selected for Google’s student upskilling and mentorship program.
+        # image: /images/achievement.jpg
+      - title: Joint Entrance Examination(JEE) - 2023
+        content: Secured a rank of 875 in JEE Advanced and 1166 in JEE Mains.
+        # url: "https://github.com/gurusabarish/hugo-profile"
+        # image: /images/achievement.jpg
+      - title: LPUNEST Scholarship
+        content: Received for academic excellence in LPU’s national-level entrance exam.
+        # url: "https://github.com/gurusabarish/hugo-profile"
+      - title: Inter-IIT Tech Meet 12.0 (IIT Madras)
+        content: Placed 5th in the Panchayati Raj Simulation Problem Statement.
+        # url: https://example.com
+      - title: Inter-IIT Tech Meet 13.0 (IIT Bombay)
+        content: Placed 6th in the IGDC Game Developement Problem Statement.
+        # url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Face Recognition System
+        content: A face recognition solution using computer vision to improve safety and streamline campus security.
+        image: /images/projects/face.jpg
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile.netlify.app
+        badges:
+          - "Computer Vision"
+          - "PyTorch"
+          - "DBMS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Saran416/MainGate-Face-Detection
+
+      - title: RISC-V Simulator
+        content: A web-based visual computer architecture simulator and assembly code editor built for the RISC-V instruction set architecture.
+        image: /images/projects/risc.png
+        # featured:
+        #   name: Demo
+        #   link: https://django-converter.herokuapp.com
+        badges:
+          - "C++"
+          - "ReactJS"
+          - "ExpressJS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Saran416/RISC-V-Simulator
+
+      - title: Inventory Management System
+        content: An end-to-end Inventory Management System for a multi-facility company.
+        image: /images/projects/inventory.jpg
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile-2.netlify.app
+        badges:
+          - "DBMS"
+          - "ReactJS"
+          - "ExpressJS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Saran416/Inventory-Management-System
+
+      - title: Diffusion Model from Scratch
+        content: PyTorch implementation of DDPM with U-Net on MNIST dataset using a cosine noise schedule to generate handwritten digits.
+        image: /images/projects/diffusion.png
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Computer Vision"
+          - "PyTorch"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Saran416/DDPM
+
+      - title: MiniTransformer
+        content: A minimal character-level Transformer model for English-to-German translation using PyTorch.
+        image: /images/projects/transformer.png
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile.netlify.app
+        badges:
+          - "NLP"
+          - "PyTorch"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Saran416/Transformer
+
+      - title: YOLOv1 from Scratch
+        content: PyTorch implementation of the YOLO object detection algorithm from scratch, trained on the PASCAL VOC dataset.
+        image: /images/projects/yolo.jpg
+        # featured:
+        #   name: Demo
+        #   link: https://github.com/Saran416/YOLO
+        badges:
+          - "Computer Vision"
+          - "PyTorch"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Saran416/YOLO
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    btnName: Mail me
+    btnLink: mailto:saisriramasarankonala@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    # recentPosts:
+    #   path: "blogs"
+    #   count: 3
+    #   title: Recent Posts
+    #   enable: true
+    #   disableFeaturedImage: false
+    # socialNetworks:
+    #   github: https://github.com
+    #   linkedin: https://linkedin.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>

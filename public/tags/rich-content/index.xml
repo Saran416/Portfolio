@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rich Content on Saran Konala</title>
+    <link>//localhost:1313/tags/rich-content/</link>
+    <description>Recent content in Rich Content on Saran Konala</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Apr 2021 19:53:33 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rich-content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rich Content</title>
+      <link>//localhost:1313/blogs/rich-content/</link>
+      <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
+      <guid>//localhost:1313/blogs/rich-content/</guid>
+      <description>Hugo ships with several Embedded Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&#xA;Theme Custom Shortcodes These shortcodes are not Hugo built-ins, but are provided by the theme.&#xA;Responsive Images with Cloudinary You can learn more about this here.&#xA;Set the cloudinary_cloud_name parameter in your site config to use this shortcode.&#xA;{{&amp;lt; dynamic-img src=&amp;#34;/my/image/on/cloudinary&amp;#34; title=&amp;#34;A title for the image&amp;#34; &amp;gt;}} Note that you do not include the file extension (e.</description>
+    </item>
+  </channel>
+</rss>
