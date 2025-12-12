@@ -29,34 +29,34 @@ markup:
       unsafe: true
 
 Menus:
-  # main:
-  #   - identifier: blog
-  #     name: Blog
-  #     title: Blog posts
-  #     url: /blogs
-  #     weight: 1
-  #   - identifier: gallery
-  #     name: Gallery
-  #     title: Blog posts
-  #     url: /gallery
-  #     weight: 2
-  # Dropdown menu
-  # - identifier: dropdown
-  #   title: Example dropdown menu
-  #   name: Dropdown
-  #   weight: 3
-  # - identifier: dropdown1
-  #   title: example dropdown 1
-  #   name: example 1
-  #   url: /#
-  #   parent: dropdown
-  #   weight: 1
-  # - identifier: dropdown2
-  #   title: example dropdown 2
-  #   name: example 2
-  #   url: /#
-  #   parent: dropdown
-  #   weight: 2
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
+  Dropdown menu:
+    - identifier: dropdown
+      title: Example dropdown menu
+      name: Dropdown
+      weight: 3
+    - identifier: dropdown1
+      title: example dropdown 1
+      name: example 1
+      url: /#
+      parent: dropdown
+      weight: 1
+    - identifier: dropdown2
+      title: example dropdown 2
+      name: example 2
+      url: /#
+      parent: dropdown
+      weight: 2
 
 params:
   title: "Saran Konala"
@@ -143,7 +143,7 @@ params:
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
-      name: "Resume"
+      name: "Blogs"
       url: "/SaranKonala.pdf"
       download: true
       newPage: false
@@ -264,10 +264,10 @@ params:
         #   Extracurricular Activities
         #     - Lorem ipsum dolor sit amet consectetur adipisicing elit.
         #     - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: false
-          name: "My academic record"
-          url: "https://example.com"
+        # featuredLink:
+        #   enable: false
+        #   name: "My academic record"
+        #   url: "https://example.com"
 
   # Achievements
   achievements:
@@ -380,6 +380,14 @@ params:
           - icon: fab fa-github
             url: https://github.com/Saran416/YOLO
 
+  blogs:
+    enable: true
+    title: "Blog Posts"
+    # featuredImage: "/images/blogs/blog1.jpg"
+    showRecentPostsOnHomePage: true
+    recentPostsCount: 3
+    disableFeaturedImage: false
+
   #Contact
   contact:
     enable: true
@@ -395,19 +403,19 @@ params:
     #   messageRows: 5
 
   footer:
-    # recentPosts:
-    #   path: "blogs"
-    #   count: 3
-    #   title: Recent Posts
-    #   enable: true
-    #   disableFeaturedImage: false
-    # socialNetworks:
-    #   github: https://github.com
-    #   linkedin: https://linkedin.com
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
 
   # List pages like blogs and posts
   listPages:
-    disableFeaturedImage: false
+    disableFeaturedImage: False
 
   # Single pages like blog and post
   singlePages:

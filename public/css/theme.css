@@ -55,29 +55,4 @@ body *::selection {
     background-color: var(--primary-color) !important;
 }
 
-/* Only on desktop (keep your existing media queries if you used them) */
-@media (hover: hover) and (pointer: fine) {
-  * { cursor: none !important; }
-
-  .circle {
-    position: fixed;
-    left: var(--x, 50%);
-    top: var(--y, 50%);
-    width: 15px;
-    height: 15px;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none; /* critical: never intercept clicks */
-    z-index: 9999;
-    transform: translate(-50%, -50%) scale(1);
-    will-change: transform, opacity, left, top;
-    opacity: 1; /* force visible */
-  }
-}
-
-/* Hide circle on touch devices */
-@media (hover: none) and (pointer: coarse) {
-  .circle { display: none; }
-}
-
 
